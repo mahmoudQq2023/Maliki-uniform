@@ -1,0 +1,182 @@
+<div class="home-page" dir="rtl" id="home">
+  <!-- Animated Background Particles -->
+  <div class="particles-container">
+    @for (particle of particles(); track $index) {
+      <div 
+        class="particle"
+        [style.left.%]="particle.x"
+        [style.top.%]="particle.y"
+        [style.width.px]="particle.size"
+        [style.height.px]="particle.size"
+        [style.animation-delay.s]="particle.delay">
+      </div>
+    }
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section">
+    <!-- Video Background with Blur Effect -->
+    <div class="hero-video-wrapper">
+      <!-- Gradient Background -->
+      <div class="video-gradient-bg"></div>
+      
+      <!-- Blurred Background Video (Duplicate & Zoom) -->
+      <video 
+        class="hero-video-blur" 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        [muted]="true">
+        <source src="assets/Video/hero-video.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Main Foreground Video -->
+      <video 
+        class="hero-video-main" 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        [muted]="true">
+        <source src="assets/Video/hero-video.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Dark Overlay -->
+      <div class="video-overlay"></div>
+    </div>
+    
+    <!-- Floating Decorations -->
+    <div class="hero-decorations">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-accent">{{ shopName() }}</span>
+        <span class="title-main">للخياطة الرجالية</span>
+      </h1>
+      
+      <p class="hero-tagline">{{ shopTagline() }}</p>
+      
+      <p class="hero-description">{{ shopDescription() }}</p>
+      
+      <div class="hero-buttons">
+        <a routerLink="/contact" class="btn btn-primary">
+          <span>احجز موعدك الآن</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a routerLink="/services" class="btn btn-secondary">
+          <span>اكتشف خدماتنا</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section class="about-section section-padding scroll-animate">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <span class="section-badge">نبذة عنَّا</span>
+          <h2 class="section-title">داهية للخياطة الرجالية والتجارة</h2>
+          <p class="about-description">
+            تأسَّست شركة داهية للخياطة الرجالية والتجارة في 23 أكتوبر 2019، لتكون عنوانًا للأناقة والفخامة في عالم الخياطة الرجالية.
+          </p>
+          <p class="about-description">
+            نعتزُّ بكوننا وجهة الرجال والأطفال الباحثين عن أرقى التصاميم وأجود الأقمشة، حيث نقدم تفصيل الثياب بتقنيات عالية وجودة لا تُضاهى، مع لمسة من التراث والحداثة تلبي ذوق عملائنا الكرام.
+          </p>
+          <a routerLink="/about" class="about-cta">
+            اكتشف المزيد عنا
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="about-images">
+          <div class="image-grid">
+            <div class="grid-item large">
+              <img src="assets/Photo/SnapInsta.to_565383426_17904483921257273_5509457446621203635_n.jpg" alt="أعمالنا" loading="lazy">
+            </div>
+            <div class="grid-item">
+              <img src="assets/Photo/SnapInsta.to_566165246_17904238347257273_3724277592639613377_n_1290.jpg" alt="أعمالنا" loading="lazy">
+            </div>
+            <div class="grid-item">
+              <img src="assets/Photo/SnapInsta.to_565978193_17904483825257273_6504702778402835964_n.jpg" alt="أعمالنا" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="services-section section-padding scroll-animate">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">خدماتنا</span>
+        <h2 class="section-title">ماذا نقدم لك</h2>
+        <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات الخياطة الرجالية الفاخرة</p>
+      </div>
+      
+      <div class="services-grid">
+        @for (service of services(); track service.title) {
+          <div class="service-card" [attr.data-color]="service.color">
+            <div class="service-image-wrapper">
+              <img [src]="service.image" [alt]="service.title" class="service-img" loading="lazy">
+            </div>
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+            <a routerLink="/services" class="service-link">
+              <span>المزيد</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section id="contact" class="cta-section scroll-animate">
+    <div class="cta-background">
+      <div class="cta-gradient"></div>
+      <div class="cta-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">جاهز لتجربة الأناقة؟</h2>
+        <p class="cta-description">احجز موعدك الآن واحصل على استشارة مجانية من خبرائنا</p>
+        <div class="cta-buttons">
+          <a routerLink="/contact" class="btn btn-gold">
+            <span>احجز موعدك</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </a>
+          <a routerLink="/contact" class="btn btn-outline-dark">
+            <span>تواصل معنا</span>
+          </a>
+        </div>
+        <div class="cta-info">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span>الخريطيات - منطقة 71، شارع 550، محل 11 - قطر</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">⏰</span>
+            <span>السبت - الخميس: 9 صباحاً - 10 مساءً</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

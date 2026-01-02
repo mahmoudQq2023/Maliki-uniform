@@ -1,0 +1,137 @@
+<div class="contact-page" dir="rtl">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="page-title">{{ pageTitle() }}</h1>
+      <p class="page-subtitle">{{ pageSubtitle() }}</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2 class="form-title">أرسل لنا رسالة</h2>
+          
+          @if (isSubmitted()) {
+            <div class="success-message">
+              <span class="success-icon">✓</span>
+              <p>تم إرسال رسالتك بنجاح! سنتواصل معك قريباً</p>
+            </div>
+          }
+          
+          <form class="contact-form" (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <label for="name">الاسم الكامل</label>
+              <input 
+                type="text" 
+                id="name" 
+                [(ngModel)]="formData.name" 
+                name="name"
+                placeholder="أدخل اسمك الكامل"
+                required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">رقم الجوال</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  [(ngModel)]="formData.phone" 
+                  name="phone"
+                  placeholder="+966 5X XXX XXXX"
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  [(ngModel)]="formData.email" 
+                  name="email"
+                  placeholder="example@email.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="service">الخدمة المطلوبة</label>
+              <select 
+                id="service" 
+                [(ngModel)]="formData.service" 
+                name="service"
+                required>
+                <option value="">اختر الخدمة</option>
+                @for (service of services(); track service) {
+                  <option [value]="service">{{ service }}</option>
+                }
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">رسالتك</label>
+              <textarea 
+                id="message" 
+                [(ngModel)]="formData.message" 
+                name="message"
+                rows="5"
+                placeholder="اكتب رسالتك هنا..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" [disabled]="isSubmitting()">
+              @if (isSubmitting()) {
+                <span class="loading-spinner"></span>
+                جاري الإرسال...
+              } @else {
+                إرسال الرسالة
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              }
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <h2 class="info-title">معلومات التواصل</h2>
+          
+          <div class="info-cards">
+            @for (info of contactInfo(); track info.label) {
+              <div class="info-card">
+                <span class="info-icon">{{ info.icon }}</span>
+                <div class="info-content">
+                  <span class="info-label">{{ info.label }}</span>
+                  <span class="info-value">{{ info.value }}</span>
+                </div>
+              </div>
+            }
+          </div>
+          
+          <div class="social-section">
+            <h3>تابعنا على</h3>
+            <div class="social-links">
+              @for (social of socialLinks(); track social.label) {
+                <a [href]="social.url" class="social-link" [title]="social.label">
+                  {{ social.icon }}
+                </a>
+              }
+            </div>
+          </div>
+          
+          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <div class="map-overlay">
+              <span class="map-icon">📍</span>
+              <p>الرياض - حي النخيل</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

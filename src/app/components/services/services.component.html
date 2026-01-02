@@ -1,0 +1,65 @@
+<div class="services-page" dir="rtl">
+  <!-- Hero Section with Fullscreen Video -->
+  <section class="hero-section">
+    <video class="hero-video" autoplay loop muted playsinline [muted]="true">
+      <source src="assets/Video/services-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    
+    <div class="hero-content">
+      <h1 class="page-title">{{ pageTitle() }}</h1>
+      <p class="page-subtitle">{{ pageSubtitle() }}</p>
+    </div>
+  </section>
+
+
+  <!-- Services Grid Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+        @for (service of services(); track service.id) {
+          <div class="service-card">
+            <div class="service-image">
+              <img [src]="service.image" [alt]="service.title" loading="lazy">
+              <div class="service-icon">{{ service.icon }}</div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">{{ service.title }}</h3>
+              <p class="service-description">{{ service.description }}</p>
+              <ul class="service-features">
+                @for (feature of service.features; track feature) {
+                  <li>
+                    <span class="check-icon">✓</span>
+                    {{ feature }}
+                  </li>
+                }
+              </ul>
+              <a routerLink="/contact" class="service-cta">
+                احجز الآن
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>جاهز لتفصيل ثوبك؟</h2>
+        <p>تواصل معنا الآن واحصل على استشارة مجانية</p>
+        <a routerLink="/contact" class="cta-button">
+          تواصل معنا
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,59 @@
+<div class="fabrics-page" dir="rtl">
+  <!-- Hero Section with Video -->
+  <section class="page-hero">
+    <div class="hero-video-wrapper">
+      <video 
+        class="hero-video" 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        [muted]="true">
+        <source src="assets/Video/fabrics-video.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="page-title">{{ pageTitle() }}</h1>
+      <p class="page-subtitle">{{ pageSubtitle() }}</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <!-- Category Filter -->
+      <div class="category-filter">
+        @for (cat of categories(); track cat.id) {
+          <button 
+            class="filter-btn" 
+            [class.active]="activeCategory() === cat.id"
+            (click)="setCategory(cat.id)">
+            {{ cat.label }}
+          </button>
+        }
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        @for (image of getFilteredImages(); track image.src) {
+          <div class="gallery-item" (click)="openLightbox(image.src)">
+            <img [src]="image.src" [alt]="image.title" loading="lazy">
+            <div class="item-overlay">
+              <span class="item-title">{{ image.title }}</span>
+              <span class="item-icon">🔍</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  @if (selectedImage()) {
+    <div class="lightbox" (click)="closeLightbox()">
+      <button class="lightbox-close">✕</button>
+      <img [src]="selectedImage()" alt="صورة مكبرة">
+    </div>
+  }
+</div>

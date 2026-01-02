@@ -1,0 +1,85 @@
+<div class="about-page" dir="rtl">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="page-title">{{ pageTitle() }}</h1>
+      <p class="page-subtitle">{{ pageSubtitle() }}</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-text">
+          <span class="section-badge">قصتنا</span>
+          <h2 class="section-title">رحلة الأناقة والتميز</h2>
+          <p class="story-paragraph">{{ shopStory() }}</p>
+          <a routerLink="/contact" class="story-cta">
+            تواصل معنا
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <div class="story-images">
+          @for (img of teamImages(); track img; let i = $index) {
+            <div class="image-item" [class]="'item-' + (i + 1)">
+              <img [src]="img" alt="صورة من المحل">
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">لماذا داهية</span>
+        <h2 class="section-title">ما يميزنا</h2>
+      </div>
+      <div class="features-grid">
+        @for (feature of features(); track feature.title) {
+          <div class="feature-card">
+            <div class="feature-icon">{{ feature.icon }}</div>
+            <h3 class="feature-title">{{ feature.title }}</h3>
+            <p class="feature-description">{{ feature.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        @for (stat of stats(); track stat.label) {
+          <div class="stat-item">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>جاهز لتجربة الأناقة؟</h2>
+        <p>احجز موعدك الآن واحصل على استشارة مجانية</p>
+        <a routerLink="/contact" class="cta-button">
+          احجز موعدك
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
