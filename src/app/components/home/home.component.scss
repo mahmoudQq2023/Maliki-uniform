@@ -77,13 +77,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.3);
-  min-width: 130%;
-  min-height: 130%;
+  transform: translate(-50%, -50%) scale(1.15);
+  min-width: 115%;
+  min-height: 115%;
   width: auto;
   height: auto;
   object-fit: cover;
-  filter: blur(30px) brightness(0.5);
+  filter: blur(15px) brightness(0.7);
   z-index: 1;
 }
 
@@ -107,9 +107,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(13, 33, 55, 0.3) 0%,
-    rgba(30, 95, 138, 0.2) 50%,
-    rgba(13, 33, 55, 0.4) 100%
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.25) 100%
   );
   z-index: 3;
 }
@@ -347,14 +347,29 @@
     }
   }
   
-  &.btn-outline-dark {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+  &.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+    
+    svg {
+      fill: white;
+    }
     
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
+    }
+  }
+  
+  &.btn-outline-dark {
+    background: transparent;
+    color: var(--sea-dark);
+    border: 2px solid var(--sea-dark);
+    
+    &:hover {
+      background: var(--sea-dark);
+      color: white;
     }
   }
 }
@@ -596,13 +611,18 @@
 
 .service-card {
   position: relative;
-  padding: 2.5rem;
+  padding: 2rem;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: 24px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 320px;
   
   &::before {
     content: '';
@@ -647,6 +667,97 @@
   &[data-color="emerald"] {
     --card-accent: var(--emerald);
   }
+  
+  /* New Premium Tailor Colors */
+  &[data-color="baby-blue"] {
+    --card-accent: var(--baby-blue);
+    border-color: rgba(137, 207, 240, 0.3);
+    
+    &:hover {
+      border-color: var(--baby-blue);
+      box-shadow: 0 25px 50px rgba(137, 207, 240, 0.2);
+    }
+  }
+  
+  &[data-color="champagne"] {
+    --card-accent: var(--taupe);
+    border-color: rgba(247, 231, 206, 0.5);
+    
+    &:hover {
+      border-color: var(--champagne);
+      box-shadow: 0 25px 50px rgba(247, 231, 206, 0.3);
+    }
+  }
+  
+  &[data-color="lavender"] {
+    --card-accent: #9370DB;
+    border-color: rgba(230, 230, 250, 0.5);
+    
+    &:hover {
+      border-color: var(--lavender);
+      box-shadow: 0 25px 50px rgba(230, 230, 250, 0.3);
+    }
+  }
+  
+  &[data-color="mint"] {
+    --card-accent: #3CB371;
+    border-color: rgba(152, 251, 152, 0.4);
+    
+    &:hover {
+      border-color: var(--mint);
+      box-shadow: 0 25px 50px rgba(152, 251, 152, 0.25);
+    }
+  }
+  
+  &[data-color="blush"] {
+    --card-accent: #DB7093;
+    border-color: rgba(255, 182, 193, 0.4);
+    
+    &:hover {
+      border-color: var(--blush);
+      box-shadow: 0 25px 50px rgba(255, 182, 193, 0.25);
+    }
+  }
+  
+  &[data-color="peach"] {
+    --card-accent: #CD853F;
+    border-color: rgba(255, 218, 185, 0.4);
+    
+    &:hover {
+      border-color: var(--peach);
+      box-shadow: 0 25px 50px rgba(255, 218, 185, 0.3);
+    }
+  }
+  
+  &[data-color="sky-blue"] {
+    --card-accent: #4682B4;
+    border-color: rgba(135, 206, 235, 0.4);
+    
+    &:hover {
+      border-color: var(--sky-blue);
+      box-shadow: 0 25px 50px rgba(135, 206, 235, 0.25);
+    }
+  }
+  
+  &[data-color="sage"] {
+    --card-accent: #6B8E23;
+    border-color: rgba(157, 193, 131, 0.4);
+    
+    &:hover {
+      border-color: var(--sage);
+      box-shadow: 0 25px 50px rgba(157, 193, 131, 0.25);
+    }
+  }
+  
+  &[data-color="burgundy"] {
+    --card-accent: #800020;
+    border-color: rgba(128, 0, 32, 0.3);
+    
+    &:hover {
+      border-color: var(--burgundy);
+      box-shadow: 0 25px 50px rgba(128, 0, 32, 0.2);
+    }
+  }
 }
 
 .service-image-wrapper {
@@ -658,6 +769,7 @@
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease;
+  border: 3px solid var(--card-accent, var(--sea-light));
   
   .service-img {
     width: 100%;
@@ -672,17 +784,35 @@
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--sea-dark);
-  margin-bottom: 0.75rem;
+  color: var(--card-accent, var(--sea-dark));
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--gray-500);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+  flex-grow: 1;
+}
+
+.service-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
 }
 
 .service-link {
@@ -694,6 +824,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
   
   &:hover {
     gap: 0.75rem;
@@ -705,6 +836,38 @@
   
   &:hover svg {
     transform: translateX(-5px);
+  }
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  
+  svg {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    
+    svg {
+      transform: scale(1.1);
+    }
+  }
+  
+  &:active {
+    transform: translateY(-1px);
   }
 }
 
@@ -1020,15 +1183,15 @@
   .cta-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--sea-blue) 0%, var(--sea-dark) 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   }
   
   .cta-pattern {
     position: absolute;
     inset: 0;
     background-image: 
-      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(30, 95, 138, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
   }
 }
 
@@ -1044,13 +1207,13 @@
   font-family: 'Playfair Display', 'Tajawal', serif;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: var(--white);
+  color: var(--sea-dark);
   margin-bottom: 1rem;
 }
 
 .cta-description {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--gray-600);
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
@@ -1073,7 +1236,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--gray-600);
     font-size: 1rem;
     
     .info-icon {

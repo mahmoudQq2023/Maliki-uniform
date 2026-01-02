@@ -197,7 +197,7 @@
 /* Stats Section */
 .stats-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, var(--sea-dark) 0%, var(--sea-blue) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
 .stats-grid {
@@ -217,13 +217,13 @@
     display: block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--sea-blue);
     margin-bottom: 0.5rem;
   }
   
   .stat-label {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-600);
   }
 }
 
@@ -256,17 +256,21 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2.5rem;
-  background: var(--gold);
-  color: var(--sea-dark);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  
+  svg {
+    fill: white;
+  }
   
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
   }
 }

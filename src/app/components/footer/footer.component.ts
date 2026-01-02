@@ -28,8 +28,8 @@ export class FooterComponent {
   ]);
 
   socialLinks = signal([
-    { icon: '📷', label: 'Instagram', href: 'https://www.instagram.com/dahya.qa/' },
-    { icon: '🎵', label: 'TikTok', href: '#' }
+    { icon: '📸', label: 'Instagram', href: 'https://www.instagram.com/dahia_qa/' },
+    { icon: '🎵', label: 'TikTok', href: 'https://www.tiktok.com/@dahia_qa' }
   ]);
 
   workingHours = signal([

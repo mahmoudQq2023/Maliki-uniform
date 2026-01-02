@@ -224,12 +224,38 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: var(--gray-600);
+
+    svg {
+      fill: var(--gray-600);
+      transition: fill 0.3s ease;
+    }
 
     &:hover {
       background: var(--sea-blue);
       border-color: var(--sea-blue);
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(30, 95, 138, 0.3);
+      
+      svg {
+        fill: white;
+      }
+    }
+    
+    &.whatsapp {
+      svg {
+        fill: #25D366;
+      }
+      
+      &:hover {
+        background: #25D366;
+        border-color: #25D366;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        
+        svg {
+          fill: white;
+        }
+      }
     }
   }
 }

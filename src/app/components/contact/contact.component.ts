@@ -22,8 +22,8 @@ export class ContactComponent {
   ]);
 
   socialLinks = signal([
-    { icon: '', label: 'Instagram', url: 'https://www.instagram.com/dahya.qa/' },
-    { icon: '🎵', label: 'TikTok', url: '#' }
+    { icon: '📸', label: 'Instagram', url: 'https://www.instagram.com/dahia_qa/' },
+    { icon: '🎵', label: 'TikTok', url: 'https://www.tiktok.com/@dahia_qa' }
   ]);
 
   formData = {
@@ -35,7 +35,7 @@ export class ContactComponent {
   };
 
   services = signal([
-    'تفصيل ثياب رجالية وأطفال',
+    'تفصيل ثياب صيفية وشتوية',
     'تفصيل بجايم نوم',
     'تفصيل جلابيات',
     'تفصيل ثياب اللينن',

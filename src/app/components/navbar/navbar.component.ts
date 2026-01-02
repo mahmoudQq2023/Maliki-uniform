@@ -15,11 +15,11 @@ export class NavbarComponent {
   isMobileMenuOpen = signal(false);
 
   navLinks = signal([
-    { label: 'الرئيسية', route: '/' },
-    { label: 'خدماتنا', route: '/services' },
-    { label: 'الأقمشة', route: '/fabrics' },
-    { label: 'من نحن', route: '/about' },
-    { label: 'تواصل معنا', route: '/contact' }
+    { label: 'الرئيسية', route: '/', icon: '🏠' },
+    { label: 'خدماتنا', route: '/services', icon: '✂️' },
+    { label: 'الأقمشة', route: '/fabrics', icon: '🧵' },
+    { label: 'من نحن', route: '/about', icon: '👔' },
+    { label: 'تواصل معنا', route: '/contact', icon: '📞' }
   ]);
 
   @HostListener('window:scroll', [])

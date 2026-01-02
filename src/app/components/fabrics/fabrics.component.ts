@@ -52,7 +52,27 @@ export class FabricsComponent {
     { src: 'assets/Photo/SnapInsta.to_482939123_17877920700257273_2334206230467715554_n.jpg', category: 'thobe', title: 'صناعة يدوية' },
     { src: 'assets/Photo/SnapInsta.to_606987827_17912219169257273_2014495659770099525_n.jpg', category: 'thobe', title: 'ثوب رجالي' },
     { src: 'assets/Photo/SnapInsta.to_607387802_17912219322257273_3385940068816222202_n.jpg', category: 'thobe', title: 'تصميم أنيق' },
-    { src: 'assets/Photo/SnapInsta.to_607968892_17912219637257273_7971796818797258619_n.jpg', category: 'thobe', title: 'ثوب حديث' }
+    { src: 'assets/Photo/SnapInsta.to_607968892_17912219637257273_7971796818797258619_n.jpg', category: 'thobe', title: 'ثوب حديث' },
+    // New images
+    { src: 'assets/Photo/SnapInsta.to_559696119_18026501513751045_5470337663988367950_n.jpg', category: 'thobe', title: 'ثوب أنيق' },
+    { src: 'assets/Photo/SnapInsta.to_574011122_18109899532523439_6922637611425939458_n.jpg', category: 'thobe', title: 'ثوب فاخر' },
+    { src: 'assets/Photo/SnapInsta.to_462721598_1219845072624615_8698368884315808718_n.jpg', category: 'thobe', title: 'ثوب عصري' },
+    { src: 'assets/Photo/SnapInsta.to_462770059_549946780853708_4023540320037133353_n.jpg', category: 'thobe', title: 'خياطة دقيقة' },
+    { src: 'assets/Photo/SnapInsta.to_467611683_17864410365257273_6789189380897279487_n.jpg', category: 'thobe', title: 'تفصيل متقن' },
+    { src: 'assets/Photo/SnapInsta.to_467621935_17864410380257273_5660260347000733159_n.jpg', category: 'thobe', title: 'ثوب راقي' },
+    { src: 'assets/Photo/SnapInsta.to_482046286_17877501717257273_4958203746083719266_n.jpg', category: 'thobe', title: 'جودة ممتازة' },
+    { src: 'assets/Photo/SnapInsta.to_482126517_17877501741257273_1657069207348570911_n.jpg', category: 'thobe', title: 'ثوب كلاسيكي' },
+    { src: 'assets/Photo/SnapInsta.to_482440902_17877501501257273_6069824242940889658_n.jpg', category: 'accessories', title: 'إكسسوار راقي' },
+    { src: 'assets/Photo/SnapInsta.to_482470110_17877501783257273_5966689746450320763_n.jpg', category: 'thobe', title: 'تفصيل فاخر' },
+    { src: 'assets/Photo/SnapInsta.to_482748984_17877920682257273_6947387869195041240_n.jpg', category: 'thobe', title: 'ثوب مميز' },
+    { src: 'assets/Photo/SnapInsta.to_482851442_17877899094257273_5222167777214624477_n.jpg', category: 'thobe', title: 'خياطة احترافية' },
+    { src: 'assets/Photo/SnapInsta.to_482953679_17878030527257273_8796397875056476066_n.jpg', category: 'thobe', title: 'تصميم عصري' },
+    { src: 'assets/Photo/SnapInsta.to_483048733_17878519608257273_8105053075357993711_n.jpg', category: 'accessories', title: 'إكسسوار أنيق' },
+    { src: 'assets/Photo/SnapInsta.to_483375888_17878519725257273_6715666732205291344_n.jpg', category: 'thobe', title: 'ثوب عربي فاخر' },
+    { src: 'assets/Photo/SnapInsta.to_483809749_17878519917257273_4245200287785756162_n.jpg', category: 'thobe', title: 'تفصيل راقي' },
+    { src: 'assets/Photo/SnapInsta.to_489013858_17882315328257273_3773912251143323654_n.jpg', category: 'thobe', title: 'ثوب احتفالي' },
+    { src: 'assets/Photo/SnapInsta.to_491462416_17882960460257273_5499399336332999660_n.jpg', category: 'accessories', title: 'تفاصيل جميلة' },
+    { src: 'assets/Photo/SnapInsta.to_491520057_17882960304257273_4978425440672439766_n.jpg', category: 'thobe', title: 'ثوب أنيق' }
   ]);
 
   setCategory(categoryId: string): void {

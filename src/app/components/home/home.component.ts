@@ -26,51 +26,57 @@ export class HomeComponent implements OnInit, AfterViewInit {
   services = signal([
     {
       image: 'assets/Photo/SnapInsta.to_565383426_17904483921257273_5509457446621203635_n.jpg',
-      title: 'تفصيل ثياب رجالية وأطفال',
+      title: 'تفصيل ثياب صيفية وشتوية',
       description: 'بأفضل أنواع الأقمشة',
-      color: 'sea'
+      color: 'baby-blue'
     },
     {
       image: 'assets/Photo/SnapInsta.to_566453319_17904483867257273_6992801448637388140_n.jpg',
       title: 'تفصيل بجايم نوم',
       description: 'بتصاميم مريحة وفاخرة',
-      color: 'gold'
+      color: 'champagne'
     },
     {
       image: 'assets/Photo/SnapInsta.to_565671516_17904378114257273_5628468379481334935_n.jpg',
       title: 'تفصيل جلابيات',
       description: 'بتصاميم عصرية وكلاسيكية',
-      color: 'violet'
+      color: 'lavender'
     },
     {
       image: 'assets/Photo/SnapInsta.to_482386413_17877503208257273_4998162196254424000_n.jpg',
       title: 'تفصيل ثياب اللينن',
       description: 'بلمسات راقية تناسب مختلف المناسبات',
-      color: 'emerald'
+      color: 'mint'
     },
     {
       image: 'assets/Photo/SnapInsta.to_482169640_17877524985257273_8877047341389515255_n.jpg',
       title: 'تفصيل قمصان اللينن',
       description: 'بأرقى الخامات والتفاصيل الدقيقة',
-      color: 'sea'
+      color: 'blush'
     },
     {
       image: 'assets/Photo/SnapInsta.to_482439979_17878030623257273_3648905373921772970_n.jpg',
       title: 'تفصيل ليس القرقيعان',
       description: 'بلمسات تراثية تناسب احتفالاتنا الجميلة',
-      color: 'gold'
+      color: 'peach'
     },
     {
       image: 'assets/Photo/SnapInsta.to_482403528_17877900567257273_907571987329740189_n.jpg',
       title: 'بيع المستلزمات الرجالية',
       description: 'من أجود الماركات',
-      color: 'violet'
+      color: 'sky-blue'
     },
     {
       image: 'assets/Photo/SnapInsta.to_482481048_17877934863257273_438153747828572486_n.jpg',
-      title: 'بيع مسابح معجون الكهرمان',
+      title: 'بيع مسابيح',
       description: 'لمحبي الفخامة والتميز',
-      color: 'emerald'
+      color: 'sage'
+    },
+    {
+      image: 'assets/Photo/SnapInsta.to_482046286_17877501717257273_4958203746083719266_n.jpg',
+      title: 'إكسسوارات رجالية',
+      description: 'شماغ وعقال وغترة من أفخم الماركات',
+      color: 'burgundy'
     }
   ]);
 
