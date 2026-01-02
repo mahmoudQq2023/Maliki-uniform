@@ -1,38 +1,12 @@
 <div class="home-page" dir="rtl" id="home">
-  <!-- Animated Background Particles -->
-  <div class="particles-container">
-    @for (particle of particles(); track $index) {
-      <div 
-        class="particle"
-        [style.left.%]="particle.x"
-        [style.top.%]="particle.y"
-        [style.width.px]="particle.size"
-        [style.height.px]="particle.size"
-        [style.animation-delay.s]="particle.delay">
-      </div>
-    }
-  </div>
-
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero-section">
-    <!-- Video Background with Blur Effect -->
+    <!-- Video Background -->
     <div class="hero-video-wrapper">
       <!-- Gradient Background -->
       <div class="video-gradient-bg"></div>
       
-      <!-- Blurred Background Video (Duplicate & Zoom) -->
-      <video 
-        class="hero-video-blur" 
-        autoplay 
-        loop 
-        muted 
-        playsinline
-        preload="auto"
-        [muted]="true">
-        <source src="assets/Video/hero-video.mp4" type="video/mp4">
-      </video>
-      
-      <!-- Main Foreground Video -->
+      <!-- Main Video -->
       <video 
         class="hero-video-main" 
         autoplay 
@@ -48,36 +22,27 @@
       <div class="video-overlay"></div>
     </div>
     
-    <!-- Floating Decorations -->
-    <div class="hero-decorations">
-      <div class="floating-shape shape-1"></div>
-      <div class="floating-shape shape-2"></div>
-      <div class="floating-shape shape-3"></div>
-      <div class="glow-orb orb-1"></div>
-      <div class="glow-orb orb-2"></div>
-    </div>
-    
+    <!-- Hero Content - AYANO Style -->
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="title-accent">{{ shopName() }}</span>
-        <span class="title-main">للخياطة الرجالية</span>
+        <span class="title-highlight">{{ shopName() }}</span>
+        للخياطة الرجالية
       </h1>
       
-      <p class="hero-tagline">{{ shopTagline() }}</p>
-      
-      <p class="hero-description">{{ shopDescription() }}</p>
-      
-      <div class="hero-buttons">
-        <a routerLink="/contact" class="btn btn-primary">
-          <span>احجز موعدك الآن</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+      <div class="hero-cta">
+        <a routerLink="/services" class="hero-btn-primary">
+          <span>اكتشف</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
           </svg>
         </a>
-        <a routerLink="/services" class="btn btn-secondary">
-          <span>اكتشف خدماتنا</span>
-        </a>
       </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>اكتشف</span>
+      <div class="scroll-icon"></div>
     </div>
   </section>
 

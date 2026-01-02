@@ -1,10 +1,34 @@
 <div class="contact-page" dir="rtl">
-  <!-- Hero Section -->
-  <section class="page-hero">
+  <!-- Hero Section - AYANO Style -->
+  <section class="hero-section">
+    <div class="hero-image">
+      <img src="assets/Photo/SnapInsta.to_564775821_17904239256257273_6752545678912854933_n.jpg" alt="تواصل معنا">
+    </div>
     <div class="hero-overlay"></div>
+    
     <div class="hero-content">
-      <h1 class="page-title">{{ pageTitle() }}</h1>
-      <p class="page-subtitle">{{ pageSubtitle() }}</p>
+      <span class="hero-subtitle">داهية</span>
+      <h1 class="hero-title">{{ pageTitle() }}</h1>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>اكتشف</span>
+      <div class="scroll-icon"></div>
+    </div>
+  </section>
+
+  <!-- Intro Section - AYANO Two Column -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <h2 class="intro-title">نسعد<br>بتواصلكم</h2>
+        </div>
+        <div class="intro-right">
+          <p class="intro-lead">للاستفسار عن خدماتنا أو حجز موعد، تواصل معنا مباشرة عبر الواتساب أو قم بزيارتنا في محلنا.</p>
+          <p class="intro-text">نحن في انتظاركم لنقدم لكم أفضل خدمات الخياطة الرجالية بجودة عالية وأسعار مناسبة.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -12,82 +36,88 @@
   <section class="contact-section">
     <div class="container">
       <div class="contact-grid">
-        <!-- WhatsApp Contact Section -->
-        <div class="whatsapp-section">
-          <h2 class="section-title">تواصل معنا مباشرة</h2>
-          <p class="section-desc">للاستفسار عن خدماتنا أو حجز موعد، تواصل معنا عبر الواتساب</p>
-          
-          <!-- WhatsApp Button -->
-          <a href="https://wa.me/97477888832?text=مرحباً، أود الاستفسار عن خدماتكم" target="_blank" class="whatsapp-big-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <!-- WhatsApp Section -->
+        <div class="whatsapp-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
-            <span>تواصل عبر واتساب</span>
+          </div>
+          <h3 class="card-title">تواصل عبر واتساب</h3>
+          <p class="card-description">أسرع طريقة للتواصل معنا</p>
+          <a href="https://wa.me/97477888832?text=مرحباً، أود الاستفسار عن خدماتكم" target="_blank" class="btn-whatsapp">
+            <span>ابدأ المحادثة</span>
           </a>
-          
-          <!-- Phone Numbers -->
-          <div class="contact-phones">
-            <a href="tel:+97444788977" class="phone-link">
-              <span class="phone-icon">📞</span>
-              <span class="phone-number">+974 44788977</span>
-            </a>
-            <a href="tel:+97477888832" class="phone-link">
-              <span class="phone-icon">📱</span>
-              <span class="phone-number">+974 77888832</span>
-            </a>
+        </div>
+
+        <!-- Phone Section -->
+        <div class="info-card">
+          <div class="card-icon">📞</div>
+          <h3 class="card-title">اتصل بنا</h3>
+          <div class="phone-numbers">
+            <a href="tel:+97444788977" class="phone-link">+974 44788977</a>
+            <a href="tel:+97477888832" class="phone-link">+974 77888832</a>
           </div>
         </div>
-        
-        <!-- Contact Info -->
-        <div class="contact-info-wrapper">
-          <h2 class="info-title">معلومات التواصل</h2>
-          
-          <div class="info-cards">
-            @for (info of contactInfo(); track info.label) {
-              <div class="info-card">
-                <span class="info-icon">{{ info.icon }}</span>
-                <div class="info-content">
-                  <span class="info-label">{{ info.label }}</span>
-                  <span class="info-value">{{ info.value }}</span>
-                </div>
-              </div>
-            }
-          </div>
-          
-          <div class="social-section">
-            <h3>تابعنا على</h3>
-            <div class="social-links">
-              <a href="https://www.instagram.com/dahia_qa/" target="_blank" class="social-link" title="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-              <a href="https://www.tiktok.com/@dahia_qa" target="_blank" class="social-link" title="TikTok">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Google Map -->
-          <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.889!2d51.4256875!3d25.3955625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45e100027a46cd%3A0x44494929b1113a33!2z2K_Yp9mH2YrYqSDZhNmE2K7Zitin2LfYqSDYp9mE2LHYrNin2YTZitipINmIINin2YTYqtis2KfYsdipIC0gRGFoaWEgbWVuJ3MgdGFpbG9yaW5nIGFuZCB0cmFkZQ!5e0!3m2!1sar!2sqa!4v1704000000000!5m2!1sar!2sqa"
-              width="100%" 
-              height="300" 
-              style="border:0; border-radius: 16px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <a href="https://www.google.com/maps?ll=25.395563,51.425688&z=16&t=m&hl=ar&gl=QA&mapclient=embed&cid=4920544511292160563" 
-               target="_blank" 
-               class="map-link">
-              <span>📍</span>
-              افتح في خرائط جوجل
-            </a>
-          </div>
+
+        <!-- Location Section -->
+        <div class="info-card">
+          <div class="card-icon">�</div>
+          <h3 class="card-title">موقعنا</h3>
+          <p class="card-text">الخريطيات - منطقة 71، شارع 550، محل 11 - قطر</p>
+          <a href="https://www.google.com/maps?ll=25.395563,51.425688&z=16" target="_blank" class="card-link">
+            افتح في الخرائط
+          </a>
+        </div>
+
+        <!-- Hours Section -->
+        <div class="info-card">
+          <div class="card-icon">⏰</div>
+          <h3 class="card-title">ساعات العمل</h3>
+          <p class="card-text">السبت - الخميس<br>9 صباحاً - 10 مساءً</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">موقعنا على الخريطة</h2>
+      </div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.889!2d51.4256875!3d25.3955625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45e100027a46cd%3A0x44494929b1113a33!2z2K_Yp9mH2YrYqSDZhNmE2K7Zitin2LfYqSDYp9mE2LHYrNin2YTZitipINmIINin2YTYqtis2KfYsdipIC0gRGFoaWEgbWVuJ3MgdGFpbG9yaW5nIGFuZCB0cmFkZQ!5e0!3m2!1sar!2sqa!4v1704000000000!5m2!1sar!2sqa"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Section -->
+  <section class="social-section">
+    <div class="container">
+      <div class="social-content">
+        <h2 class="section-title">تابعنا</h2>
+        <div class="social-links">
+          <a href="https://www.instagram.com/dahia_qa/" target="_blank" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.tiktok.com/@dahia_qa" target="_blank" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
         </div>
       </div>
     </div>
