@@ -10,8 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  // Shop Info - الاسم الصحيح: داهية
-  shopName = signal('داهية');
+  // Shop Info - الاسم الصحيح: الزي المالكي
+  shopName = signal('الزي المالكي');
   shopTagline = signal('فن الأناقة في كل غرزة');
   shopDescription = signal('نصنع لك ثوبك بأعلى معايير الجودة والدقة، لتعكس شخصيتك الفريدة بلمسة من الفخامة والأناقة');
 
@@ -25,55 +25,55 @@ export class HomeComponent implements OnInit, AfterViewInit {
   // Services - الخدمات الفعلية
   services = signal([
     {
-      image: 'assets/Photo/SnapInsta.to_565383426_17904483921257273_5509457446621203635_n.jpg',
+      image: 'assets/Photo/service_thobe_1767461430978.png',
       title: 'تفصيل ثياب صيفية وشتوية',
       description: 'بأفضل أنواع الأقمشة',
       color: 'baby-blue'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_566453319_17904483867257273_6992801448637388140_n.jpg',
+      image: 'assets/Photo/service_pajamas_1767461446477.png',
       title: 'تفصيل بجايم نوم',
       description: 'بتصاميم مريحة وفاخرة',
       color: 'champagne'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_565671516_17904378114257273_5628468379481334935_n.jpg',
+      image: 'assets/Photo/service_jalabiya_1767461461346.png',
       title: 'تفصيل جلابيات',
       description: 'بتصاميم عصرية وكلاسيكية',
       color: 'lavender'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482386413_17877503208257273_4998162196254424000_n.jpg',
+      image: 'assets/Photo/service_linen_thobe_1767461478179.png',
       title: 'تفصيل ثياب اللينن',
       description: 'بلمسات راقية تناسب مختلف المناسبات',
       color: 'mint'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482169640_17877524985257273_8877047341389515255_n.jpg',
+      image: 'assets/Photo/service_linen_shirt_1767461493087.png',
       title: 'تفصيل قمصان اللينن',
       description: 'بأرقى الخامات والتفاصيل الدقيقة',
       color: 'blush'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482439979_17878030623257273_3648905373921772970_n.jpg',
+      image: 'assets/Photo/service_kids_girgian_1767461522666.png',
       title: 'تفصيل ليس القرقيعان',
       description: 'بلمسات تراثية تناسب احتفالاتنا الجميلة',
       color: 'peach'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482403528_17877900567257273_907571987329740189_n.jpg',
+      image: 'assets/Photo/service_accessories_1767461538750.png',
       title: 'بيع المستلزمات الرجالية',
       description: 'من أجود الماركات',
       color: 'sky-blue'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482481048_17877934863257273_438153747828572486_n.jpg',
+      image: 'assets/Photo/service_misbaha_1767461552480.png',
       title: 'بيع مسابيح',
       description: 'لمحبي الفخامة والتميز',
       color: 'sage'
     },
     {
-      image: 'assets/Photo/SnapInsta.to_482046286_17877501717257273_4958203746083719266_n.jpg',
+      image: 'assets/Photo/service_shemagh_1767461568545.png',
       title: 'إكسسوارات رجالية',
       description: 'شماغ وعقال وغترة من أفخم الماركات',
       color: 'burgundy'
@@ -82,11 +82,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   // Fabric Types
   fabrics = signal([
-    { name: 'قماش إيطالي', image: 'assets/Photo/SnapInsta.to_479652626_17896247971257273_2088971847396093888_n.jpg', color: '#1e5f8a' },
-    { name: 'قماش إنجليزي', image: 'assets/Photo/SnapInsta.to_481008538_17896247590257273_1091626685195420108_n.jpg', color: '#2c7ab8' },
-    { name: 'قماش فرنسي', image: 'assets/Photo/SnapInsta.to_481227891_17896247773257273_3667556654785389977_n.jpg', color: '#4da3d9' },
-    { name: 'قماش ياباني', image: 'assets/Photo/SnapInsta.to_480890549_17896247917257273_844626757596259988_n.jpg', color: '#6ec4f5' }
+    { name: 'قماش إيطالي', image: 'assets/Photo/fabric_italian_1767461597915.png', color: '#1e5f8a' },
+    { name: 'قماش إنجليزي', image: 'assets/Photo/fabric_english_1767461612797.png', color: '#2c7ab8' },
+    { name: 'قماش فرنسي', image: 'assets/Photo/fabric_french_1767461628048.png', color: '#4da3d9' },
+    { name: 'قماش ياباني', image: 'assets/Photo/fabric_japanese_1767461643410.png', color: '#6ec4f5' }
   ]);
+
 
   // Features
   features = signal([

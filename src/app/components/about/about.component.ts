@@ -11,10 +11,10 @@ import { RouterLink } from '@angular/router';
 })
 export class AboutComponent {
   pageTitle = signal('من نحن');
-  pageSubtitle = signal('داهية للخياطة الرجالية والتجارة');
+  pageSubtitle = signal('الزي المالكي للخياطة الرجالية والتجارة');
 
   shopStory = signal(`
-    تأسَّست شركة داهية للخياطة الرجالية والتجارة في 23 أكتوبر 2019، 
+    تأسَّست شركة الزي المالكي للخياطة الرجالية والتجارة في 23 أكتوبر 2019، 
     لتكون عنوانًا للأناقة والفخامة في عالم الخياطة الرجالية.
     
     نعتزُّ بكوننا وجهة الرجال والأطفال الباحثين عن أرقى التصاميم وأجود الأقمشة، 
@@ -53,9 +53,9 @@ export class AboutComponent {
   ]);
 
   teamImages = signal([
-    'assets/Photo/SnapInsta.to_481774425_17877503184257273_5792347191084804191_n.jpg',
-    'assets/Photo/SnapInsta.to_481922882_17877503145257273_8487871291994754186_n.jpg',
-    'assets/Photo/SnapInsta.to_482034819_17877525261257273_1182828934528825341_n.jpg',
-    'assets/Photo/SnapInsta.to_482036401_17877503163257273_5168097681670044964_n.jpg'
+    'assets/Photo/about_reception_1767461920236.png',
+    'assets/Photo/about_fabrics_corner_1767461934914.png',
+    'assets/Photo/about_tailoring_area_1767461948755.png',
+    'assets/Photo/about_storefront_1767461964897.png'
   ]);
 }

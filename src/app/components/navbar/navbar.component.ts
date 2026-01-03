@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  shopName = signal('داهية');
+  shopName = signal('الزي المالكي');
   isScrolled = signal(false);
   isMobileMenuOpen = signal(false);
 

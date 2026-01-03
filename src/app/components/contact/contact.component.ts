@@ -14,16 +14,16 @@ export class ContactComponent {
   pageSubtitle = signal('نحن هنا لمساعدتك، تواصل معنا في أي وقت');
 
   contactInfo = signal([
-    { icon: '📍', label: 'العنوان', value: 'الخريطيات - منطقة 71، شارع 550، مبنى 561، محل رقم 11 - قطر' },
+    { icon: '📍', label: 'العنوان', value: 'الدوحة، قطر' },
     { icon: '📞', label: 'الهاتف', value: '+974 44788977' },
     { icon: '📱', label: 'الجوال', value: '+974 77888832' },
-    { icon: '✉️', label: 'البريد الإلكتروني', value: 'info@dahya.online' },
+    { icon: '✉️', label: 'البريد الإلكتروني', value: 'info@alzayalmalaki.com' },
     { icon: '🕐', label: 'ساعات العمل', value: 'السبت - الخميس: 9 صباحاً - 10 مساءً' }
   ]);
 
   socialLinks = signal([
-    { icon: '📸', label: 'Instagram', url: 'https://www.instagram.com/dahia_qa/' },
-    { icon: '🎵', label: 'TikTok', url: 'https://www.tiktok.com/@dahia_qa' }
+    { icon: '📸', label: 'Instagram', url: 'https://www.instagram.com/alzay_almalaki/' },
+    { icon: '🎵', label: 'TikTok', url: 'https://www.tiktok.com/@alzay_almalaki' }
   ]);
 
   formData = {

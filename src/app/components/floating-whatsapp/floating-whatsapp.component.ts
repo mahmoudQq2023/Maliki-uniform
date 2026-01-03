@@ -7,7 +7,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
   imports: [CommonModule],
   template: `
     <a 
-      href="https://wa.me/97477888832?text=مرحباً، أود الاستفسار عن خدماتكم"
+      href="https://wa.me/97477888832?text=مرحباً الزي المالكي، أود الاستفسار عن خدماتكم"
       target="_blank"
       class="floating-whatsapp"
       title="تواصل معنا عبر واتساب">

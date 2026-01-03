@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  shopName = signal('داهية');
+  shopName = signal('الزي المالكي');
   shopTagline = signal('فن الأناقة في كل غرزة');
   currentYear = signal(new Date().getFullYear());
 
@@ -21,15 +21,15 @@ export class FooterComponent {
   ]);
 
   contactInfo = signal([
-    { icon: '📍', text: 'الخريطيات - منطقة 71، شارع 550، مبنى 561، محل رقم 11 - قطر' },
+    { icon: '📍', text: 'الدوحة، قطر' },
     { icon: '📞', text: '+974 44788977' },
     { icon: '📱', text: '+974 77888832' },
-    { icon: '✉️', text: 'info@dahya.online' }
+    { icon: '✉️', text: 'info@alzayalmalaki.com' }
   ]);
 
   socialLinks = signal([
-    { icon: '📸', label: 'Instagram', href: 'https://www.instagram.com/dahia_qa/' },
-    { icon: '🎵', label: 'TikTok', href: 'https://www.tiktok.com/@dahia_qa' }
+    { icon: '📸', label: 'Instagram', href: 'https://www.instagram.com/alzay_almalaki/' },
+    { icon: '🎵', label: 'TikTok', href: 'https://www.tiktok.com/@alzay_almalaki' }
   ]);
 
   workingHours = signal([
