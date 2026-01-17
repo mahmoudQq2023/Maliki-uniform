@@ -254,6 +254,105 @@
   }
 }
 
+/* KM Company Info Card */
+.km-company-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #f5f5f5;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  
+  @media (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .km-logo-wrapper {
+    flex-shrink: 0;
+
+    .km-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+
+  .km-info {
+    .km-title {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .km-description {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+
+      .highlight {
+        color: #3B82F6;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/* Slim Divider */
+.footer-divider-slim {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+
+/* Created By Section */
+.created-by {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #2D2D2D;
+  border-radius: 50px;
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .created-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .creator-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .creator-photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .creator-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+  }
+}
+
 /* Footer Pattern - Hidden */
 .footer-pattern {
   display: none;
